@@ -21,6 +21,9 @@ namespace Test1
         bool done;
         string Prev;
         string Sqrt;
+        double Percent;
+        string RcprclStr;
+        double Rcprcl;
         double Mem;
         public Form2()
         {
@@ -88,7 +91,6 @@ namespace Test1
         {
             Button sign = (Button)sender;
             Operator = sign.Text[0];
-            Sqrt = "";
             if (done == false)
             {
                 lblDetails.Text += " " + lblAnswer.Text + " " + Operator;
@@ -313,7 +315,52 @@ namespace Test1
 
             Num = double.Parse(lblAnswer.Text);
             lblAnswer.Text = Math.Sqrt(Num).ToString();
-            Position = 1;
+            Clear = true;
+
+            if (Position == 0)
+            {
+                Answer = Num = double.Parse(lblAnswer.Text);
+                Clear = true;
+            }
+
+        }
+        private void btnPerc_Click(object sender, EventArgs e)
+        {
+            double CurNum = double.Parse(lblAnswer.Text);
+
+            Percent = Answer / 100;
+            lblAnswer.Text = (CurNum * Percent).ToString();
+            if (done == false)
+            { 
+                lblDetails.Text += lblAnswer.Text;
+                done = true;
+            }
+            else
+            {
+                lblDetails.Text = lblDetails.Text.Substring(0, lblDetails.Text.Length - Prev.Length) + lblAnswer.Text;
+            }
+            Clear = true;
+            Prev=lblAnswer.Text;
+        }
+
+        private void btnRcprcl_Click(object sender, EventArgs e)
+        {
+            double CurNum = double.Parse(lblAnswer.Text);
+
+            Rcprcl = 1 / CurNum;
+            lblAnswer.Text = Rcprcl.ToString();
+            if (done == false)
+            {
+                Prev = lblDetails.Text;
+                RcprclStr = "reciproc(" + CurNum + ")";
+                done = true;
+            }
+            else
+            {
+                RcprclStr = "reciproc(" + RcprclStr + ")";
+            }
+            lblDetails.Text = Prev + " " + RcprclStr;
+
             Clear = true;
         }
 

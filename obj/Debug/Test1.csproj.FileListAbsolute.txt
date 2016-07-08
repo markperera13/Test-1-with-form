@@ -8,3 +8,7 @@ C:\Working\Projects\Test1\Test1\bin\Debug\Test1.pdb
 C:\Working\Projects\Test1\Test1\obj\Debug\Test1.exe
 C:\Working\Projects\Test1\Test1\obj\Debug\Test1.pdb
 C:\Working\Projects\Test1\Test1\obj\Debug\Test1.csprojResolveAssemblyReference.cache
+C:\Working\Projects\Test1\Test1\bin\Debug\Test1.exe.manifest
+C:\Working\Projects\Test1\Test1\bin\Debug\Test1.application
+C:\Working\Projects\Test1\Test1\obj\Debug\Test1.exe.manifest
+C:\Working\Projects\Test1\Test1\obj\Debug\Test1.application

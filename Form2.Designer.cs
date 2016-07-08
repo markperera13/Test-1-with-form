@@ -60,7 +60,7 @@
             this.lblAnswer = new System.Windows.Forms.Label();
             this.btnSqrt = new System.Windows.Forms.Button();
             this.btnPerc = new System.Windows.Forms.Button();
-            this.btnInv = new System.Windows.Forms.Button();
+            this.btnReciprocal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -424,20 +424,22 @@
             this.btnPerc.TabIndex = 37;
             this.btnPerc.Text = "%";
             this.btnPerc.UseVisualStyleBackColor = true;
+            this.btnPerc.Click += new System.EventHandler(this.btnPerc_Click);
             // 
-            // btnInv
+            // btnReciprocal
             // 
-            this.btnInv.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnInv.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnInv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnInv.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnInv.Location = new System.Drawing.Point(224, 168);
-            this.btnInv.Margin = new System.Windows.Forms.Padding(0);
-            this.btnInv.Name = "btnInv";
-            this.btnInv.Size = new System.Drawing.Size(39, 23);
-            this.btnInv.TabIndex = 38;
-            this.btnInv.Text = "1/x";
-            this.btnInv.UseVisualStyleBackColor = true;
+            this.btnReciprocal.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnReciprocal.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnReciprocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnReciprocal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReciprocal.Location = new System.Drawing.Point(224, 168);
+            this.btnReciprocal.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReciprocal.Name = "btnReciprocal";
+            this.btnReciprocal.Size = new System.Drawing.Size(39, 23);
+            this.btnReciprocal.TabIndex = 38;
+            this.btnReciprocal.Text = "1/x";
+            this.btnReciprocal.UseVisualStyleBackColor = true;
+            this.btnReciprocal.Click += new System.EventHandler(this.btnRcprcl_Click);
             // 
             // Form2
             // 
@@ -446,7 +448,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.btnInv);
+            this.Controls.Add(this.btnReciprocal);
             this.Controls.Add(this.btnPerc);
             this.Controls.Add(this.btnSqrt);
             this.Controls.Add(this.lblMem);
@@ -520,7 +522,7 @@
         private System.Windows.Forms.Label lblAnswer;
         private System.Windows.Forms.Button btnSqrt;
         private System.Windows.Forms.Button btnPerc;
-        private System.Windows.Forms.Button btnInv;
+        private System.Windows.Forms.Button btnReciprocal;
 
 
     }
